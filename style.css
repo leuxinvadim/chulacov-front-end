@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+.logo{
+    position: absolute;
+    text-decoration: none;
+}
+
+body{
+    background: #101114;
+    font: 16px/1.25 Arial, Helvetica, sans-serif;
+    padding: 40px 0;
+}
+
+.wrapper{
+    width: 960px;
+    margin: 0 auto;
+}
+
+header{
+    background: #00aeef;
+    height: 162px;
+
+}
+
+header a {
+    display: block;
+
+}
+
+h1{
+    float: right;
+    padding-right: 250px;
+    padding-top: 45px;
+    color: #193945;
+    font: 36px/1.10 Open Sans;
+    font-weight: bold;
+}
+
+
+
+.par{
+    display: block;
+    margin-left: 350px;
+    color: #193945;
+    font: 14px/1.60 Arial;
+    padding-top: 95px;
+
+}
+
+nav{
+    width: 318px;
+    float: left;
+    background-color: #1f2229;
+}
+
+
+
+nav li{
+    margin: 30px 0 0 30px;
+}
+
+nav li a{
+    text-decoration: none;
+    font: 16px/1.60 Open Sans;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 1px;
+    display: block;
+
+
+}
+
+.razdel2{
+    margin-top: 25px;
+    height: 1px;
+    border:none;
+    background-color:#333;
+}
+
+.border{
+    margin-top:20px;
+}
+
+#styles{
+    margin-bottom: 20px;
+}
+
+
+#navigation ul li:hover {
+    background: #2a2d37;
+}
+
+.main{
+
+    background: #f7f8f8;
+
+}
+
+.paragraph{
+    padding: 0 0 0 350px;
+}
