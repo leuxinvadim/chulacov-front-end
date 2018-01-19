@@ -10,6 +10,8 @@ ul{
 .logo{
     position: absolute;
     text-decoration: none;
+    border-bottom: 1px solid #292929;
+
 }
 
 body{
@@ -25,12 +27,12 @@ body{
 
 header{
     background: #00aeef;
-    height: 162px;
-
+    height: 167px;
 }
 
 header a {
     display: block;
+    padding: 0 0 0 0;
 
 }
 
@@ -82,7 +84,7 @@ nav li a{
     margin-top: 25px;
     height: 1px;
     border:none;
-    background-color:#333;
+    background-color: #2c2c2c;
 }
 
 .border{
@@ -102,11 +104,77 @@ nav li a{
 
 .info{
     font: 16px/1.60 Arial;
-    color: #888b8b;
+    color: #8494ab;
 }
 
 .dannye{
     font: 22px/1.60 Open Sans;
     font-weight:bolder;
     color: #383d43;
+}
+
+.example{
+    display:inline-block;
+    position:relative;
+
+}
+.example span{
+    display: inline-block;
+    position: absolute;
+    top: 23px;
+    padding: 53px;
+    padding-top: 0;
+    color:#8494ab;
+    font: 16px/1.60 Arial;
+}
+
+.enter{
+    width: 59px;
+    height: 38px;
+    margin: 0 15px 15px 0;
+    text-align:center;
+    float: left;
+    border: 1px solid #d0dcdc;
+}
+.line_block{
+    position: relative;
+    left: 55px;
+    top: -215px;
+
+}
+
+.srok{
+position: relative;
+    right: 250px;
+    top:-164px;
+    font: 16px/1.60 Arial;
+    color:#8494ab;
+}
+.styled-select{
+    height: 38px;
+    width: 62px;
+    overflow: hidden;
+    background: url("images/strelka.png") no-repeat right;
+    background-size: 20%;
+    border: 1px solid #d0dcdc;
+    background-color: white;
+    text-align-last: left;
+}
+
+.styled-select select {
+    background: transparent;
+    width: 62px;
+    height: 38px;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    -webkit-appearance: none;
+}
+
+.styled-select2{
+    height: 38px;
+    width: 70px;
+    text-align-last: center;
+
 }
