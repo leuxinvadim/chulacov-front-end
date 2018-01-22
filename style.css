@@ -17,7 +17,7 @@ ul{
 body{
     background: #101114;
     font: 16px/1.25 Arial, Helvetica, sans-serif;
-    padding: 40px 0;
+    padding: 80px 80px 80px 80px;
 }
 
 .wrapper{
@@ -97,6 +97,7 @@ nav li a{
 
 .main{
     width: 640px;
+    height: 585px;
     background: #f7f8f8;
     float: right;
 
@@ -151,11 +152,14 @@ position: relative;
     color:#8494ab;
 }
 .styled-select{
+    position: relative;
+    right: 250px;
+    top:-162px;
     height: 38px;
     width: 62px;
     overflow: hidden;
-    background: url("images/strelka.png") no-repeat right;
-    background-size: 20%;
+    background: url("images/strelka.png") no-repeat 40px;
+    background-size: 25%;
     border: 1px solid #d0dcdc;
     background-color: white;
     text-align-last: left;
@@ -173,8 +177,89 @@ position: relative;
 }
 
 .styled-select2{
+    position: relative;
+    left: 140px;
+    top:-202px;
     height: 38px;
     width: 70px;
-    text-align-last: center;
+    overflow: hidden;
+    background: url("images/strelka.png") no-repeat 50px;
+    background-size: 22%;
+    border: 1px solid #d0dcdc;
+    background-color: white;
+    text-align-last: left;
+}
 
+.styled-select2 select{
+    background: transparent;
+    width: 70px;
+    height: 38px;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    -webkit-appearance: none;
+}
+
+.submit{
+    position: relative;
+    left: 54px;
+    top:-187px;
+    height: 38px;
+    width: 315px;
+    border: 1px solid #d0dcdc;
+}
+::-webkit-input-placeholder { color: #b8c3c3; font-family: Arial; font-size: 16px}
+
+.code{
+    position: relative;
+    left: 450px;
+    top:-305px;
+    font: 16px/1.60 Arial;
+    color:#8494ab;
+}
+
+.code_CVC{
+    position: relative;
+    left: 450px;
+    top:-300px;
+    height: 38px;
+    width: 135px;
+    border: 1px solid #d0dcdc;
+    background: url("images/podskazka.png") no-repeat 100px ;
+    background-color: white;
+}
+
+.oplata{
+    position: relative;
+    right: 102px;
+    top:-155px;
+    height: 41px;
+    width: 174px;
+    background: url("images/oplata2.png") -3px;
+    border-radius: 4px 4px;
+    border: 1px solid #96c000;
+    color: white;
+    font: 14px Open Sans;
+    font-weight: 600;
+}
+
+.oplata:hover{
+    cursor: pointer;
+    background: #9bcb06;
+}
+footer{
+    height: 300px;
+    width: 640px;
+    background: #373c43;
+    float: right;
+    color: #89909d;
+    padding-top: 30px;
+    font: 12px/1.70 Arial;
+    font-weight: bold;
+    word-spacing: -0.1em;
+}
+
+.end{
+    padding-left: 38px;
 }
