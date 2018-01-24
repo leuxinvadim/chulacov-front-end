@@ -206,8 +206,9 @@ position: relative;
     left: 54px;
     top:-187px;
     height: 38px;
-    width: 315px;
+    width: 295px;
     border: 1px solid #d0dcdc;
+    padding-left: 15px;
 }
 ::-webkit-input-placeholder { color: #b8c3c3; font-family: Arial; font-size: 16px}
 
@@ -224,10 +225,11 @@ position: relative;
     left: 450px;
     top:-300px;
     height: 38px;
-    width: 135px;
+    width: 120px;
     border: 1px solid #d0dcdc;
     background: url("images/podskazka.png") no-repeat 100px ;
     background-color: white;
+    padding-left: 15px;
 }
 
 .oplata{
