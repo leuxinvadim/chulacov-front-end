@@ -22,7 +22,6 @@ function partial() {
         newArgs.map(function (t) {
             args.push(t)
         });
-        console.log(newArgs);
         return funct.apply(null, args)
     }
 }
