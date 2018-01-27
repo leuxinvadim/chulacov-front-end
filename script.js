@@ -2,24 +2,10 @@
 function cutCharatersExcept(regexp, string) {
     return string.replace(regexp(), '')
 }
+
 // Удаляет из конца строки символы, длина которых превышает переданный лимит
 function cutToLength(length, string) {
     return string.slice(0, length)
-}
-
-// Первый аргумент - функция для вызова
-// Остальные аргументы - аргументы для функции
-// Возвращает функцию, которая вызывает и возвращает переданную первым аргументом функцию с ее аргументами.
-function partial() {
-    var args = [].slice.call(arguments);
-    var funct = args.shift();
-    return function () {
-        var newArgs = [].slice.call(arguments);
-        newArgs.map(function (t) {
-            args.push(t)
-        });
-        return funct.apply(null, args)
-    }
 }
 
 // Обработчик. Принимает первым аргументом input, а остальными - функции для вызова
