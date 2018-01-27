@@ -24,39 +24,37 @@ function OnChangeCVC(input) {
 
 function sendform(form) {
 
-    console.log(form);
-
-      if (document.forms[0].fname.value == "") {
+      if (form.fname.value == "") {
           alert('Пожалуйста, введите Номер карты');
           document.card_form.fname.focus();
           return false
       }
 
-      if (document.forms[0].fname_1.value == "") {
+      if (form.fname_1.value == "") {
           alert('Пожалуйста, введите Номер карты');
           document.card_form.fname_1.focus();
           return false
       }
 
-      if (document.forms[0].fname_2.value == "") {
+      if (form.fname_2.value == "") {
           alert('Пожалуйста, введите Номер карты');
           document.card_form.fname_2.focus();
           return false
       }
 
-      if (document.forms[0].fname_3.value == "") {
+      if (form.fname_3.value == "") {
           alert('Пожалуйста, введите Номер карты');
           document.card_form.fname_3.focus();
           return false
       }
 
-      if (document.forms[0].card_name.value == "") {
+      if (form.card_name.value == "") {
           alert('Пожалуйста, введите Держателя карты');
           document.card_form.card_name.focus();
           return false
       }
 
-      if (document.forms[0].CVC.value == "") {
+      if (form.CVC.value == "") {
           alert('Пожалуйста, введите код CVV/CVC2');
           document.card_form.CVC.focus();
           return false
