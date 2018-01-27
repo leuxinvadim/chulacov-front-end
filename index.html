@@ -36,7 +36,8 @@
                 <div class="info">
                     <br>
                     <p class="paragraph">&emsp;&emsp; Информация по оплате:</p><br>
-                    <p>&emsp;&emsp; Номер счета:&emsp; &emsp; &emsp; <span style="color: #1f2229">87123658716587</span></p>
+                    <p>&emsp;&emsp; Номер счета:&emsp; &emsp; &emsp; <span style="color: #1f2229">87123658716587</span>
+                    </p>
                     <p>&emsp;&emsp; Сумма платежа:&emsp; &emsp;<span style="color: #1f2229">100 руб.</span></p>
                     <br>
                     <p class="dannye">&emsp;&ensp; Данные банковской карты</p><br>
@@ -48,16 +49,16 @@
 
                     <div class="line_block">
                         <div>
-                            <input class="enter" oninput="cutCharactersExceptNumbers(this, 4)" name="fname">
+                            <input class="enter" oninput="cutCharacters(this, exceptNumbers, 4)" name="fname">
                         </div>
                         <div>
-                            <input class="enter" oninput="cutCharactersExceptNumbers(this, 4)" name="fname_1">
+                            <input class="enter" oninput="cutCharacters(this, exceptNumbers, 4)" name="fname_1">
                         </div>
                         <div>
-                            <input class="enter" oninput="cutCharactersExceptNumbers(this, 4)" name="fname_2">
+                            <input class="enter" oninput="cutCharacters(this, exceptNumbers, 4)" name="fname_2">
                         </div>
                         <div>
-                            <input class="enter" oninput="cutCharactersExceptNumbers(this, 4)" name="fname_3">
+                            <input class="enter" oninput="cutCharacters(this, exceptNumbers, 4)" name="fname_3">
                         </div>
                     </div>
 
@@ -91,9 +92,11 @@
                         </select>
                     </div>
 
-                    <input class="submit" name="card_name" type="text" placeholder="Держатель карты" onchange="OnChangeOwner(this)" oninput="OnInputOwner(this)">
+                    <input class="submit" name="card_name" type="text" placeholder="Держатель карты"
+                           onchange="OnChangeOwner(this)" oninput="cutCharacters(this, exceptLatinCharactersAndSpace)">
                     <p class="code">Код CVV2 / CVC2</p>
-                    <input name="CVC" class="code_CVC" type="text" onchange="OnChangeCVC(this)" oninput="cutCharactersExceptNumbers(this, 3)">
+                    <input name="CVC" class="code_CVC" type="text" onchange="OnChangeCVC(this)"
+                           oninput="cutCharacters(this, exceptNumbers, 4)">
                     <input type="submit" class="oplata" value="Оплатить">
                 </div>
             </div>
