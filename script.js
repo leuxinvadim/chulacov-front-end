@@ -1,19 +1,15 @@
-//Core
-function cutCharacters(input, regexp, maxCharacters) {
-    input.value = input.value.replace(regexp(), '');
-    if (maxCharacters) {
-        input.value = input.value.slice(0, maxCharacters);
-    }
-}
-
+//Удаляет символы, кроме совпадений с переданным в функции регулярным выражением
 function cutCharatersExcept(regexp, string) {
     return string.replace(regexp(), '')
 }
-
-function cutToLength(lenght, string) {
-    return string.slice(0, lenght)
+// Удаляет из конца строки символы, длина которых превышает переданный лимит
+function cutToLength(length, string) {
+    return string.slice(0, length)
 }
 
+// Первый аргумент - функция для вызова
+// Остальные аргументы - аргументы для функции
+// Возвращает функцию, которая вызывает и возвращает переданную первым аргументом функцию с ее аргументами.
 function partial() {
     var args = [].slice.call(arguments);
     var funct = args.shift();
@@ -26,6 +22,7 @@ function partial() {
     }
 }
 
+// Обработчик. Принимает первым аргументом input, а остальными - функции для вызова
 function onInput() {
     var args = [].slice.call(arguments);
     var input = args.shift();
