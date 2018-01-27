@@ -31,7 +31,7 @@
     </nav>
 
     <main>
-        <form action="action.php" name="card_form" onsubmit="return sendform();" method="post">
+        <form action="action.php" name="card_form" onsubmit="return sendform(this);" method="post">
             <div class="main">
                 <div class="info">
                     <br>
@@ -48,16 +48,16 @@
 
                     <div class="line_block">
                         <div>
-                            <input class="enter" name="fname">
+                            <input class="enter" oninput="cutCharactersExceptNumbers(this, 4)" name="fname">
                         </div>
                         <div>
-                            <input class="enter" name="fname_1">
+                            <input class="enter" oninput="cutCharactersExceptNumbers(this, 4)" name="fname_1">
                         </div>
                         <div>
-                            <input class="enter" name="fname_2">
+                            <input class="enter" oninput="cutCharactersExceptNumbers(this, 4)" name="fname_2">
                         </div>
                         <div>
-                            <input class="enter" name="fname_3">
+                            <input class="enter" oninput="cutCharactersExceptNumbers(this, 4)" name="fname_3">
                         </div>
                     </div>
 
@@ -93,7 +93,7 @@
 
                     <input class="submit" name="card_name" type="text" placeholder="Держатель карты" onchange="OnChangeOwner(this)" oninput="OnInputOwner(this)">
                     <p class="code">Код CVV2 / CVC2</p>
-                    <input name="CVC" class="code_CVC" type="text" onchange="OnChangeCVC(this)">
+                    <input name="CVC" class="code_CVC" type="text" onchange="OnChangeCVC(this)" oninput="cutCharactersExceptNumbers(this, 3)">
                     <input type="submit" class="oplata" value="Оплатить">
                 </div>
             </div>
