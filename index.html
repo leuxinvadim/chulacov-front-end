@@ -49,7 +49,7 @@
 
                     <div class="line_block">
                         <div>
-                            <input class="enter" oninput="cutCharacters(this, exceptNumbers, 4)" name="fname">
+                            <input class="enter" oninput="onInputCardNumber(this, partial(cutCharatersExcept, exceptNumbers), partial(cutToLength, 4))" name="fname">
                         </div>
                         <div>
                             <input class="enter" oninput="cutCharacters(this, exceptNumbers, 4)" name="fname_1">

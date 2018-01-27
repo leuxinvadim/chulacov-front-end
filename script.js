@@ -1,3 +1,4 @@
+//Core
 function cutCharacters(input, regexp, maxCharacters) {
     input.value = input.value.replace(regexp(), '');
     if (maxCharacters) {
@@ -5,12 +6,40 @@ function cutCharacters(input, regexp, maxCharacters) {
     }
 }
 
+function cutCharatersExcept(regexp, string) {
+    return string.replace(regexp(), '')
+}
+
+function cutToLength(lenght, string) {
+    return string.slice(0, lenght)
+}
+
+function partial() {
+    var args = [].slice.call(arguments);
+    var funct = args.shift();
+    return function () {
+        var newArgs = [].slice.call(arguments);
+        newArgs.map(function (t) {
+            args.push(t)
+        });
+        console.log(newArgs);
+        return funct.apply(null, args)
+    }
+}
+
+//Infrastructure
 function exceptNumbers() {
     return /[^\d]/g;
 }
 
 function exceptLatinCharactersAndSpace() {
     return /[^A-z\s]/g;
+}
+
+//User Methods
+function onInputCardNumber(input, except, maxLenght) {
+    input.value = except(input.value);
+    input.value = maxLenght(input.value);
 }
 
 // Проверяет длину введенных данных
