@@ -49,16 +49,16 @@
 
                     <div class="line_block">
                         <div>
-                            <input class="enter" oninput="onInputCardNumber(this, partial(cutCharatersExcept, exceptNumbers), partial(cutToLength, 4))" name="fname">
+                            <input class="enter" oninput="onInput(this, partial(cutCharatersExcept, exceptNumbers), partial(cutToLength, 4))" name="fname">
                         </div>
                         <div>
-                            <input class="enter" oninput="cutCharacters(this, exceptNumbers, 4)" name="fname_1">
+                            <input class="enter" oninput="onInput(this, partial(cutCharatersExcept, exceptNumbers), partial(cutToLength, 4))" name="fname_1">
                         </div>
                         <div>
-                            <input class="enter" oninput="cutCharacters(this, exceptNumbers, 4)" name="fname_2">
+                            <input class="enter" oninput="onInput(this, partial(cutCharatersExcept, exceptNumbers), partial(cutToLength, 4))" name="fname_2">
                         </div>
                         <div>
-                            <input class="enter" oninput="cutCharacters(this, exceptNumbers, 4)" name="fname_3">
+                            <input class="enter" oninput="onInput(this, partial(cutCharatersExcept, exceptNumbers), partial(cutToLength, 4))" name="fname_3">
                         </div>
                     </div>
 
@@ -93,10 +93,10 @@
                     </div>
 
                     <input class="submit" name="card_name" type="text" placeholder="Держатель карты"
-                           onchange="OnChangeOwner(this)" oninput="cutCharacters(this, exceptLatinCharactersAndSpace)">
+                           onchange="OnChangeOwner(this)" oninput="onInput(this, partial(cutCharatersExcept, exceptLatinCharactersAndSpace));">
                     <p class="code">Код CVV2 / CVC2</p>
                     <input name="CVC" class="code_CVC" type="text" onchange="OnChangeCVC(this)"
-                           oninput="cutCharacters(this, exceptNumbers, 4)">
+                           oninput="onInput(this, partial(cutCharatersExcept, exceptNumbers), partial(cutToLength, 3))">
                     <input type="submit" class="oplata" value="Оплатить">
                 </div>
             </div>

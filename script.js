@@ -26,6 +26,14 @@ function partial() {
     }
 }
 
+function onInput() {
+    var args = [].slice.call(arguments);
+    var input = args.shift();
+    args.map(function (func) {
+        input.value = func(input.value);
+    });
+}
+
 //Infrastructure
 function exceptNumbers() {
     return /[^\d]/g;
@@ -36,10 +44,6 @@ function exceptLatinCharactersAndSpace() {
 }
 
 //User Methods
-function onInputCardNumber(input, except, maxLenght) {
-    input.value = except(input.value);
-    input.value = maxLenght(input.value);
-}
 
 // Проверяет длину введенных данных
 function OnChangeOwner(input) {
