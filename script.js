@@ -32,8 +32,8 @@ function exceptLatinCharactersAndSpace() {
 function OnChangeOwner(input) {
     var maxLen = 3;
     if (input.value.length < maxLen)
-        return alert('Введите больше ${maxLen} символов');
-    document.card_form.fname.focus();
+        return alert(`Введите больше ${maxLen} символов`);
+    document.card_form.focus();
 }
 
 function sendform(form) {
