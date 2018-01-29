@@ -32,18 +32,11 @@ function exceptLatinCharactersAndSpace() {
 function OnChangeOwner(input) {
     var maxLen = 3;
     if (input.value.length < maxLen)
-        return alert(`Введите больше ${maxLen} символов`);
-}
-
-// Проверяет длину введенных  для CVC кода
-function OnChangeCVC(input) {
-    var maxLen = 3;
-    if (input.value.length < maxLen)
-        return alert('Введите 3 символа');
+        return alert('Введите больше ${maxLen} символов');
+    document.card_form.fname.focus();
 }
 
 function sendform(form) {
-
     if (form.fname.value == "") {
         alert('Пожалуйста, введите Номер карты');
         document.card_form.fname.focus();
