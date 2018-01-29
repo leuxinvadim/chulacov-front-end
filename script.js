@@ -26,6 +26,18 @@ function exceptLatinCharactersAndSpace() {
     return /[^A-z\s]/g;
 }
 
+function cutCharactersExceptNumbers() {
+    return cutCharatersExcept.bind(null, exceptNumbers)
+}
+
+function cutCharactersExceptLatinCharactersAndSpace() {
+    return cutCharatersExcept.bind(null, exceptLatinCharactersAndSpace)
+}
+
+function cutTo(lenght) {
+    return cutToLength.bind(null, lenght)
+}
+
 //User Methods
 
 // Проверяет длину введенных данных
