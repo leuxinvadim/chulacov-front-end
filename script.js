@@ -30,49 +30,54 @@ function exceptLatinCharactersAndSpace() {
 
 // Проверяет длину введенных данных
 function OnChangeOwner(input) {
+    var maxLen = 4;
+    if (input.value.length < maxLen)
+        return alert(`Введите 4 символоа`);
+}
+
+// Проверяет длину введенных CVC данных
+function OnChangeCVC(input) {
     var maxLen = 3;
     if (input.value.length < maxLen)
-        return alert(`Введите больше ${maxLen} символов`);
-    document.card_form.focus();
+        return alert('Введите 3 символа');
 }
+
+// Проверяет длину введенных данных Держателя карты
+function OnChangeOwner2(input) {
+    var maxLen = 4;
+    if (input.value.length < maxLen)
+        return alert('Введите минимум 4 символа');
+}
+
 
 function sendform(form) {
-    if (form.fname.value == "") {
-        alert('Пожалуйста, введите Номер карты');
-        document.card_form.fname.focus();
-        return false
+
+    var valid = true;
+    var elems = document.forms[0].elements;
+    for (var i = 0; i < document.forms[0].length; i++) {
+        if (elems[i].getAttribute('type') == 'text' ||
+            elems[i].tagName == 'TEXTAREA') {
+            if (elems[i].value.length == '') {
+                elems[i].style.border = '1px solid red';
+                valid = false;
+            }
+        }
     }
 
-    if (form.fname_1.value == "") {
-        alert('Пожалуйста, введите Номер карты');
-        document.card_form.fname_1.focus();
-        return false
+    if (!valid) {
+        alert('Заполните выделенные поля');
+        return false;
     }
-
-    if (form.fname_2.value == "") {
-        alert('Пожалуйста, введите Номер карты');
-        document.card_form.fname_2.focus();
-        return false
-    }
-
-    if (form.fname_3.value == "") {
-        alert('Пожалуйста, введите Номер карты');
-        document.card_form.fname_3.focus();
-        return false
-    }
-
-    if (form.card_name.value == "") {
-        alert('Пожалуйста, введите Держателя карты');
-        document.card_form.card_name.focus();
-        return false
-    }
-
-    if (form.CVC.value == "") {
-        alert('Пожалуйста, введите код CVV/CVC2');
-        document.card_form.CVC.focus();
-        return false
-    }
-
-    return true;
+    else return true;
 }
+    window.onload = function () {
+      document.forms[0].onmouseover = function () {
+          var elems = document.forms[0].elements;
+          for (var i=0; i<elems.length; i++)
+              if (elems[i].style.border == '1px solid red')
+                  elems[i].style.border = '';
+      };
+    };
+
+
 

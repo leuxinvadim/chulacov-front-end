@@ -49,16 +49,16 @@
 
                     <div class="line_block">
                         <div>
-                            <input class="enter" oninput="onInput(this, cutCharatersExcept.bind(null, exceptNumbers), cutToLength.bind(null, 4))" name="fname" onchange="OnChangeOwner(this)">
+                            <input class="enter" oninput="onInput(this, cutCharatersExcept.bind(null, exceptNumbers), cutToLength.bind(null, 4))" name="fname"   onchange="OnChangeOwner(this)" type="text">
                         </div>
                         <div>
-                            <input class="enter" oninput="onInput(this, cutCharatersExcept.bind(null, exceptNumbers), cutToLength.bind(null, 4))" name="fname_1" onchange="OnChangeOwner(this)">
+                            <input class="enter" oninput="onInput(this, cutCharatersExcept.bind(null, exceptNumbers), cutToLength.bind(null, 4))" name="fname_1" onchange="OnChangeOwner(this)" type="text">
                         </div>
                         <div>
-                            <input class="enter" oninput="onInput(this, cutCharatersExcept.bind(null, exceptNumbers), cutToLength.bind(null, 4))" name="fname_2" onchange="OnChangeOwner(this)">
+                            <input class="enter" oninput="onInput(this, cutCharatersExcept.bind(null, exceptNumbers), cutToLength.bind(null, 4))" name="fname_2" onchange="OnChangeOwner(this)" type="text">
                         </div>
                         <div>
-                            <input class="enter" oninput="onInput(this, cutCharatersExcept.bind(null, exceptNumbers), cutToLength.bind(null, 4))" name="fname_3" onchange="OnChangeOwner(this)">
+                            <input class="enter" oninput="onInput(this, cutCharatersExcept.bind(null, exceptNumbers), cutToLength.bind(null, 4))" name="fname_3" onchange="OnChangeOwner(this)" type="text">
                         </div>
                     </div>
 
@@ -93,9 +93,9 @@
                     </div>
 
                     <input class="submit" name="card_name" type="text" placeholder="Держатель карты"
-                           onchange="OnChangeOwner(this)" oninput="onInput(this, cutCharatersExcept.bind(null, exceptLatinCharactersAndSpace));">
+                           onchange="OnChangeOwner2(this)" oninput="onInput(this, cutCharatersExcept.bind(null, exceptLatinCharactersAndSpace));">
                     <p class="code">Код CVV2 / CVC2</p>
-                    <input name="CVC" class="code_CVC" type="text" onchange="OnChangeOwner(this)"
+                    <input name="CVC" class="code_CVC" type="text" onchange="OnChangeCVC(this)"
                            oninput="onInput(this, cutCharatersExcept.bind(null, exceptNumbers), cutToLength.bind(null, 3))">
                     <input type="submit" class="oplata" value="Оплатить">
                 </div>
