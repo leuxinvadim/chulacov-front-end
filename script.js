@@ -29,10 +29,10 @@ function exceptLatinCharactersAndSpace() {
 //User Methods
 
 // Проверяет длину введенных данных
-function OnChangeOwner(input) {
+function OnChangeOwner(input, message) {
     var maxLen = 4;
     if (input.value.length < maxLen)
-        return alert(`Введите 4 символоа`);
+        return alert(message);
 }
 
 // Проверяет длину введенных CVC данных
@@ -42,19 +42,12 @@ function OnChangeCVC(input) {
         return alert('Введите 3 символа');
 }
 
-// Проверяет длину введенных данных Держателя карты
-function OnChangeOwner2(input) {
-    var maxLen = 4;
-    if (input.value.length < maxLen)
-        return alert('Введите минимум 4 символа');
-}
-
 
 function sendform(form) {
 
     var valid = true;
-    var elems = document.forms[0].elements;
-    for (var i = 0; i < document.forms[0].length; i++) {
+    var elems = form.elements;
+    for (var i = 0; i < form.length; i++) {
         if (elems[i].getAttribute('type') == 'text' ||
             elems[i].tagName == 'TEXTAREA') {
             if (elems[i].value.length == '') {
